@@ -1,0 +1,70 @@
+<div class="main">
+    <nb-card >
+        <nb-card-body >
+          <nb-stepper #stepper>
+            <nb-step [stepControl]="firstForm" label="First step">
+              <form [formGroup]="firstForm" (ngSubmit)="onFirstSubmit()" class="step-container">
+                  
+                <p class="instruction">
+                Choose your "WebGL" file
+                </p>
+                <div class="input-group">
+                <input id="zipgameupload" (change)="onFileChange($event)" nbInput type="file" placeholder="game source file" class="form-control" formControlName="gamefile"
+                        [ngClass]="{'form-control-danger': firstForm.invalid && (firstForm.dirty || firstForm.touched)}">
+                </div>
+                       
+                
+                <button type="submit" nbButton nbStepperNext >next</button>
+              </form>
+            </nb-step>
+            <nb-step [stepControl]="secondForm" label="Second step">
+              <form [formGroup]="secondForm" (ngSubmit)="onSecondSubmit()" class="step-container">
+                <div class="input">
+                    <p class="instruction">
+                    Game name:
+                    </p>
+                    <div class="input-group">
+                    <input nbInput type="text" placeholder="Enter game name" class="form-control" formControlName="gamename"
+                            [ngClass]="{'form-control-danger': secondForm.invalid && (secondForm.dirty || secondForm.touched)}">
+                    </div>
+                </div>
+                <div class="input">
+                    <p class="instruction">
+                    Game description:
+                    </p>
+                    <div class="input-group">
+                    <input nbInput type="text" placeholder="Enter game description" class="form-control" formControlName="gamedescription"
+                            [ngClass]="{'form-control-danger': secondForm.invalid && (secondForm.dirty || secondForm.touched)}">
+                    </div>
+                    
+                </div>
+                
+                
+                <button type="button" nbButton nbStepperPrevious>prev</button>
+                <button type="submit" nbButton nbStepperNext>next</button>
+              </form>
+            </nb-step>
+            <nb-step [stepControl]="thirdForm" label="Third step">
+              <form [formGroup]="thirdForm" (ngSubmit)="onThirdSubmit()" class="step-container">
+                <p class="instruction">
+                  Last step! Choose a display photo or screenshot
+                </p>
+                <div class="input-group">
+                  <input nbInput type="file" (change)="onjpgChange($event)" placeholder="game photo" class="form-control" formControlName="displayphoto"
+                         [ngClass]="{'form-control-danger': thirdForm.invalid && (thirdForm.dirty || thirdForm.touched)}">
+                </div>
+                <button type="button" nbButton nbStepperPrevious>prev</button>
+                <button type="submit" nbButton nbStepperNext (click)="confirm()" >Confirm</button>
+              </form>
+            </nb-step>
+            <nb-step [stepControl]="thirdForm" [hidden]="true" label="Third step">
+              <div class="step-container">
+                <h3>Congratulations!</h3>
+                <h5>Your game has been uploaded</h5>
+                <button nbButton (click)="stepper.reset()">Upload another game</button>
+              </div>
+            </nb-step>
+          </nb-stepper>
+        </nb-card-body>
+      </nb-card>
+</div>

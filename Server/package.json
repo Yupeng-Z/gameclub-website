@@ -1,0 +1,37 @@
+{
+  "name": "assignment-7-yupeng-z",
+  "version": "1.0.0",
+  "description": "assignment7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2020/assignment-7-Yupeng-Z.git"
+  },
+  "author": "Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2020/assignment-7-Yupeng-Z/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2020/assignment-7-Yupeng-Z#readme",
+  "dependencies": {
+    "adm-zip": "^0.4.14",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "request": "^2.88.0",
+    "uuid": "^7.0.3"
+  }
+}

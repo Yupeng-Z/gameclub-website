@@ -1,0 +1,264 @@
+
+<!-- <div class="nav" >
+    <app-nav-bar></app-nav-bar>
+</div> -->
+
+<div class="gamebody" style="width: 90%;margin-left: 5%">
+
+    <div class="carousel"  *ngIf="value==''"class="carousel">
+        <app-carousel></app-carousel>
+    </div>
+
+    <!-- <div  class="result" style="margin-left: 60%;">
+            <h5></h5>
+            <h5>searched for:   {{ value || ' ' }}</h5>
+    </div>
+    <div class="search" style="margin-left: 70%;margin-right: 20px">         
+            <nb-search type="rotate-layout"></nb-search>
+    </div> -->
+
+    <div *ngIf="value!=''" class="row2">
+            <div class="inner-main">
+                
+                <h2 class="mb-4">Search Result:</h2>
+                <button nbButton outline status="info" (click)="value='';tmpgl=[]">back</button>
+                <!-- <p><strong>Name:</strong> {{this.currentUser.name}}</p>
+                <p><strong>Email:</strong> {{this.currentUser.email}}</p> -->   
+            </div>
+        </div>
+        <!-- <div *ngFor="let game of gamelist">
+            <div *ngIf="game.name.search(value)!=-1;then tempaddgame(game)">
+                
+            </div>
+        </div> -->
+    <div *ngIf="value!=''" class="wrapper" >
+            <div class="showgame" *ngFor="let game of tmpgl">
+                <mat-card   class="example-card col" id="{{game.id}}">
+                        <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>{{game.name}}</mat-card-title>
+                        <mat-card-subtitle> V.1.0 </mat-card-subtitle>
+                        <ngb-rating [rate]='game.rating' [readonly]="true"></ngb-rating>
+                        </mat-card-header>
+                        <img mat-card-image src='http://localhost:3000/gamepicture/{{game.id}}{{game.photo}}' alt="Photo" style="height: 230px">
+                        <mat-card-content>
+                        <p>
+                            {{game.description}}
+                        </p>
+                        </mat-card-content>
+                        <mat-card-actions >
+                            <button class="btn btn-lg btn-outline-primary" (click)='downloadgame($event)' style="background-color: blueviolet ">DOWNLOAD</button>
+                            <!-- <button nbButton id="{{game.id}}" (click)='downloadgame($event)' outline status="primary">DOWNLOAD</button> -->
+                            <ngbd-modal-component [gameID]=game.id [Player]=currentUser [game1]=game></ngbd-modal-component>
+                        </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+
+
+    <div class="container" id="1">
+            
+            <div class="row">
+                <div class="inner-main">
+                    <h2 class="mb-4">Recently uploaded:</h2>
+                    <!-- <p><strong>Name:</strong> {{this.currentUser.name}}</p>
+                    <p><strong>Email:</strong> {{this.currentUser.email}}</p> -->   
+                </div>
+            </div>
+    
+            <div *ngIf="value==''" class="result" style="margin-left: 50%;">
+                    <h5></h5>
+                    <h5>searched for:   {{ value || ' ' }}</h5>
+            </div>
+            
+            <div class="search" style="margin-left: 20px;margin-right: 26px">         
+                    <nb-search type="rotate-layout" (click)="tmpgl=[];"></nb-search>
+            </div>
+        </div>
+    <div class="wrapper" >
+        <div class="showgame" *ngFor="let game of gamelist">
+            <mat-card  class="example-card col" id="{{game.id}}">
+                    <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>{{game.name}}</mat-card-title>
+                    <mat-card-subtitle> V.1.0 </mat-card-subtitle>
+                    <ngb-rating [rate]='game.rating' [readonly]="true"></ngb-rating>
+                    </mat-card-header>
+                    <img mat-card-image src='http://localhost:3000/gamepicture/{{game.id}}{{game.photo}}' alt="Photo" style="height: 230px">
+                    <mat-card-content>
+                    <p>
+                        {{game.description}}
+                    </p>
+                    </mat-card-content>
+                    <mat-card-actions >
+                    <button class="btn btn-lg btn-outline-primary" (click)='downloadgame($event)' style="background-color: blueviolet ">DOWNLOAD</button>
+                    <!-- <button nbButton id="{{game.id}}" (click)='downloadgame($event)' hero status="primary" style="margin-right: 10px">DOWNLOAD</button> -->
+                    <ngbd-modal-component [gameID]=game.id [Player]=currentUser [game1]=game style="margin-left: 20px"></ngbd-modal-component>
+                    </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+
+        
+    <!-- <app-toolbar></app-toolbar> -->
+    <div class="container" id="2">
+            
+        <div class="row">
+            <div class="inner-main">
+                <h2 class="mb-4">Popular Games</h2>
+                <!-- <p><strong>Name:</strong> {{this.currentUser.name}}</p>
+                <p><strong>Email:</strong> {{this.currentUser.email}}</p> -->   
+            </div>
+        </div>
+
+        <!-- <div class="result" style="margin-left: 50%;">
+                <h5></h5>
+                <h5>searched for:   {{ value || ' ' }}</h5>
+        </div>
+        
+        <div class="search" style="margin-left: 30px;margin-right: 20px">         
+                <nb-search type="rotate-layout"></nb-search>
+        </div> -->
+    </div>
+
+
+    <div class="wrapper" id="3">
+
+        <mat-card class="example-card col">
+                <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Angry Birds</mat-card-title>
+                <mat-card-subtitle>simple</mat-card-subtitle>
+                <ngb-rating [rate]="7" [readonly]="true"></ngb-rating>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/images/timg (1).jpg" alt="Photo of game1" style="height: 230px;">
+                <mat-card-content>
+                <p>
+                        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                        bred for hunting.                
+                </p>
+                </mat-card-content>
+                <mat-card-actions >
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+                <!-- <p>{{gamesid}}</p> -->
+                <ngbd-modal-component [gameID]=testgameid></ngbd-modal-component>
+                </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="example-card col">
+                <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Balance Ball</mat-card-title>
+                <mat-card-subtitle>v.1.0</mat-card-subtitle>
+                <ngb-rating [rate]="6" [readonly]="true"></ngb-rating>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/images/carouselgame2.png" alt="Photo of game2" style="height: 230px;">
+                <mat-card-content>
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                </p>
+                </mat-card-content>
+                <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+                <ngbd-modal-component [gameID]=testgameid></ngbd-modal-component>
+                </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="example-card col">
+                <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                <ngb-rating [rate]="3" [readonly]="true"></ngb-rating>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/images/timg (1).jpg" alt="Photo " style="height: 230px;">
+                <mat-card-content>
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                </p>
+                </mat-card-content>
+                <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+                <ngbd-modal-component [gameID]=testgameid></ngbd-modal-component>
+                </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="example-card col">
+                <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                <ngb-rating [rate]="3" [readonly]="true"></ngb-rating>
+                </mat-card-header>
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo " style="height: 230px;">
+                <mat-card-content>
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                </p>
+                </mat-card-content>
+                <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+                <ngbd-modal-component [gameID]=gamesids[0].id></ngbd-modal-component>
+                </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="example-card col">
+                <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                <ngb-rating [rate]="3" [readonly]="true"></ngb-rating>
+                </mat-card-header>
+                <img mat-card-image src="../../assets/images/timg (1).jpg" alt="Photo of a Shiba Inu" style="height: 230px;">
+                <mat-card-content>
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                </p>
+                </mat-card-content>
+                <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+                <ngbd-modal-component [gameID]=testgameid [Player]=currentUser></ngbd-modal-component>
+                </mat-card-actions>
+        </mat-card>
+
+
+
+    </div>
+
+    <!-- <ngb-pagination [collectionSize]="120" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination> -->
+
+    
+
+    
+    <!-- <div class="ngbd-modal-component">
+        <ngbd-modal-component></ngbd-modal-component>
+        
+    </div> -->
+
+
+        
+    
+
+</div>
+<div *ngIf="this.authService.isLoggedIn" class="upload">
+    <button type="button" class="btn btn-outline-secondary" ngbTooltip="Upload your games!"
+    tooltipClass="my-custom-class" (click)="open()">
+    <h1 style="color:rgba(241, 245, 10, 0.7);">+</h1>
+    </button>
+</div>
+
+<app-footbar></app-footbar>

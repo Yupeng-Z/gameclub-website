@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.css" />
+<!-- <nb-card>
+        <nb-card-body>
+      
+          <nb-tabset fullWidth>
+            <nb-tab tabTitle="My info">
+              <p>List of <strong>info</strong>.</p>
+              <p><strong>Name:</strong> {{this.currentUser.name}}</p>
+              <p><strong>Email:</strong> {{this.currentUser.email}}</p>
+            </nb-tab>
+            <nb-tab tabTitle="liked">
+              <p>List of <strong>games</strong>.</p>
+            </nb-tab>
+            <nb-tab tabTitle="My games">
+              <p>List of <strong>my games</strong>.</p>
+              <app-table></app-table>
+            </nb-tab>
+          </nb-tabset>
+      
+        </nb-card-body>
+</nb-card> -->
+
+<div class="d-flex">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+    <li ngbNavItem="top">
+      <a ngbNavLink>My info</a>
+      
+      <ng-template ngbNavContent >
+          <div class="NavContent">
+            <p >My <strong>info</strong>.</p>
+            <p><strong>Name:</strong><input id="nameinput" [disabled]="true" value={{this.currentUser.name}} >
+            <p><strong>Email:</strong><input type="email" pattern="[^@]*@[^@]*" id="emailinput" [disabled]="true" value={{this.currentUser.email}}>
+            <div class="btnarea">
+              <button nbButton id="alterbtn" size="small" status="basic" (click)="enablealter()" style="margin-right: 15px;" [disabled]="false">Alter</button>
+              <button nbButton  type="submit" id="savebtn" size="small" status="basic" (click)="save()" [disabled]="true">Save</button>
+            </div>
+          </div>
+          
+      </ng-template>
+      
+    </li>
+    
+    
+    <li ngbNavItem="bottom">
+      <a ngbNavLink>My games</a>
+      <ng-template ngbNavContent>
+          <div class="NavContent3">
+              <p>List of <strong>my games</strong>.</p>
+              <app-table></app-table>
+          </div>
+      </ng-template>
+    </li>
+
+
+    <li ngbNavItem="middle">
+        <a ngbNavLink>My Article</a>
+        <ng-template ngbNavContent>
+          <div class="NavContent2">
+<!-- <<<<<<< HEAD -->
+              <!-- <app-table></app-table> -->
+<!-- ======= -->
+          <p>View Your Articles</p>
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th scope="col" style="color: #8c9eff">Create Time</th>
+                <th scope="col" style="color: #8c9eff">Title</th>
+                <th scope="col" style="color: #8c9eff">Author</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let article of myarticlelist">
+                <td>
+                  <ngb-highlight style="color: #adbaff" [result]="article.CreateDate" [term]="article.CreateDate"></ngb-highlight>
+                </td>
+                <td><a style="color: #adbaff" routerLink="{{article._id}}" [routerLink]="'/details'">{{article.title}}</a></td>
+                <td>
+                  <ngb-highlight style="color: #adbaff" [result]="article.author" [term]="article.author"></ngb-highlight>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+<!-- >>>>>>> master -->
+          </div>
+          </ng-template>
+      </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="ml-4"></div>
+</div>
+
+<pre>Active: {{ active }}</pre>

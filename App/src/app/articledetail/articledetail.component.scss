@@ -1,0 +1,96 @@
+.outter{
+  width: 50%;
+  height:1000px;
+  margin:0 auto;
+}
+
+.leftpart{
+  height: 800px;
+  width: 300px;
+  background-color: #97a1c0;
+  font-size: large;
+
+}
+.rightpart{
+  height: 600px;
+  width: 300px;
+  background-color: #6872c0;
+  font-size: large;
+
+}
+
+button{
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+textarea{
+
+  background-color: transparent;
+  font-family: Papyrus;
+  font-size: large;
+
+}
+
+.authorid {
+  width: 250px;
+  height: 30px;
+  text-decoration: underline;
+  border: transparent;
+  margin-top: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+.title{
+  width: 250px;
+  height: 30px;
+  text-decoration: underline;
+  border: transparent;
+  margin-top: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.picture{
+  width: 500px;
+  height: 250px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.content{
+  width: 500px;
+  height: 200px;
+  text-decoration: underline;
+  border: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-top:0px;
+  //background-color: transparent;
+}
+
+.commentleave{
+  margin-left: 190px;
+}
+
+.text{
+  margin-top: 400px;
+  width: 300px;
+  height: 45px;
+  border-radius:9px;
+  display: inline-block;
+  float: left;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 395px;
+}
+
+.toptext{
+  font-size: large;
+  margin:0 auto;
+}
+
+.button{
+  margin-left: 340px;
+}

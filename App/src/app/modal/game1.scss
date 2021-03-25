@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#canvas{
+     position: fixed;
+     background: #ccc;
+     overflow: auto;
+     z-index: -1;
+}
+
+.likebutton{
+    margin-left:80%;
+}

@@ -1,0 +1,33 @@
+<div class="">
+
+    <mat-toolbar class = "" style="height:60px" color="primary">
+        <!-- <button mat-raised-button color="primary" (click)="drawer.toggle()">
+            <img src="assets/images/favicon.png" height="30px" width="30px" />
+            <span style="text-align:center " style="padding-left:10px">GaM-Lab</span>
+        </button> -->
+        <button  mat-button color="accent">
+            <span style="text-align:center; color: white">Information</span>
+        </button>
+        <a *ngIf="this.authService.isLoggedIn" class="">User Profile</a>
+        <div class="empty"></div>
+        <button  mat-button color="accent" >
+            <span style="text-align:center ; color: white">Registration</span>
+        </button>
+        <button  mat-button color="accent" (click)="logout()" *ngIf="this.authService.isLoggedIn">
+            <span style="text-align:center ; color: white">Logout</span>
+        </button>
+    </mat-toolbar>
+    <div style="padding-bottom: 60px"></div>
+    
+    <!-- <mat-drawer #drawer class="example-sidenav" mode="side">
+            <p>Auto-resizing sidenav</p>
+            <p *ngIf="showFiller">Site under construction</p>
+            <button (click)="showFiller = !showFiller" mat-button>
+              More info
+            </button>
+    </mat-drawer> -->
+    
+    <!-- <mat-drawer-container>
+    
+    </mat-drawer-container> -->
+    </div>

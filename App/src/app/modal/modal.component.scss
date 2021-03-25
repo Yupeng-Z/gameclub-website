@@ -1,0 +1,16 @@
+.game{
+    padding-left:0;
+    float: left; 
+}
+
+button{
+    color: orange;
+    background-color: blueviolet;
+    &:hover{
+        background-color:white;
+    }
+}
+
+.rating{
+    margin-left: 100px;
+}

@@ -1,0 +1,84 @@
+table{
+    color:yellow;
+}
+
+
+.ngbd-modal-component{
+    margin-top: 10%;
+    margin-left: 100px;
+ }
+
+ .container{
+     margin-top:10%;
+ }
+
+ .main{
+    margin-top:10%;
+ }
+
+ .nav{
+    position:relative;
+    z-index:99;
+ }
+ 
+ .carousel{
+    position: relative;
+    //margin-top: 50px;
+    z-index:0;
+ }
+
+ .container{
+    display: flex; 
+    flex-wrap: wrap;   
+}
+
+.example-card {
+  flex: 1 0 21%;
+  margin: 0 10px 10px 0;
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('../../assets/images/icon1smile.png');
+  background-size: cover;
+}
+
+
+.wrapper {
+    /* 转化元素类型 */
+    display: grid;
+    /* 设置网格的间隙 */
+    grid-gap: 60px;
+    /* 设置每列的尺寸 */
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-bottom: 50px;
+}
+
+.col {
+    background: rgb(184, 226, 231);
+}
+
+mat-card-actions{
+    margin-bottom: 0px;
+}
+
+.upload{
+    z-index: 99;
+    position: fixed;
+    bottom: 7%;
+    right:1%;
+    // margin-left: 96%;
+    // margin-bottom: 2%;
+    button{
+        width: 70px;
+        height: 70px;
+        border-radius:50%;
+        
+    }
+}
+
+.row2{
+    margin-top: 70px;
+    margin-bottom: 10px;
+}

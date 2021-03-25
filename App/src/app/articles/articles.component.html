@@ -1,0 +1,43 @@
+<div class="articlebody" style="width: 90%;margin-left: 5%">
+
+ <div class="carousel">
+  <app-carousel></app-carousel>
+</div>
+
+<p class="container">
+  Show your love for games and communicate with people who love games!
+</p>
+  <nb-badge text="badgeText"></nb-badge>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col" style="color: #8c9eff">Create Time</th>
+      <th scope="col" style="color: #8c9eff">Title</th>
+      <th scope="col" style="color: #8c9eff">AuthorID</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let article of articlelist">
+      <td>
+        <ngb-highlight style="color: #adbaff" [result]="article.CreateDate" [term]="article.CreateDate"></ngb-highlight>
+      </td>
+      <td><div style="color: #adbaff" (click)="detail(article._id)"><a>{{article.title}}</a></div></td>
+      <td>
+        <ngb-highlight style="color: #adbaff" [result]="article.author" [term]="article.author"></ngb-highlight>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+<div *ngIf="this.authService.isLoggedIn" class="uploadarticles">
+  <button type="button" class="btn btn-outline-secondary" ngbTooltip="Upload your articles!"
+          tooltipClass="my-custom-class" (click)="open()">
+    <h1 style="color:rgba(193,204,155,0.7);">+</h1>
+  </button>
+</div>
+
+<div>
+  <app-footbar></app-footbar>
+</div>

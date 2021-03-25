@@ -1,0 +1,30 @@
+<!-- 
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.css" />
+ -->
+
+<div  class="game" style="float: left;  width: 1000px; background-color: rgb(150, 212, 253);position: relative;z-index:9999" > 
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="header">
+            <p>Author:{{authorname}}</p>
+            <!-- <p>rating:{{gamerating}}</p> -->
+        </div>
+        <app-gametest url="http://localhost:3000/gamesstorage/{{gameID}}/unitygame.html"></app-gametest>
+        
+        <div class="rating" >
+            <app-rating [game]=game1 [Player]=Player></app-rating>
+            
+        </div>
+        
+        
+
+        <div class="modal-footer" >
+            <div class="likebutton" style="margin-left:60%;">
+                <nb-icon (click)='setlike()' icon={{like}} status="danger" icon-primary-color=""></nb-icon>
+                 <!-- <button nbButton (click)='setlike()' ><nb-icon icon={{like}} status="danger" icon-primary-color=""></nb-icon></button> -->
+            </div>
+            <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+        </div> 
+</div>

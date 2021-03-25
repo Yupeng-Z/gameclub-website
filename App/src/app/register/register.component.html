@@ -1,0 +1,120 @@
+<div class="">
+    <div class="row">
+      <div class="">
+  
+        <div id="login-wrapper" class="" 
+        [ngClass]="{register: route == '/register'}"
+        >
+          <div class="form-wrapper">
+            <div class="wrapper">
+              <div class="register">
+                  <form [formGroup]="registerForm" 
+                  (submit)="registerUser()"
+                  >
+                      <h2 class="mb-3">Register</h2>
+                      <br>
+                      <p class="mb-3">
+                        Type your e-mail and other information to register.
+                      </p>
+                    <div class="form-group mb-3">
+                        <!-- <label>Name</label> -->
+                        <input 
+                          type="text" 
+                          class="form-control" 
+                          formControlName="name" 
+                          placeholder="Enter name" 
+                          [ngClass]="{
+                            'is-invalid': name.invalid && (name.dirty || name.touched),
+                            'is-valid': name.valid
+                          }"
+                          autocomplete="off"
+                          class="form-control" formControlName="name"
+                        required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <!-- <label>Email address</label> -->
+                        <input  
+                              type="text"
+                              placeholder="e-mail"
+                              formControlName="email"
+                              id="registerEmail"
+                              class="form-control p-4 login-email" 
+                              [ngClass]="{
+                                'is-invalid': email.invalid && (email.dirty || email.touched),
+                                'is-valid': email.valid
+                              }"
+                              autocomplete="off"
+                              class="form-control" formControlName="email" 
+                              placeholder="Enter email" 
+                          required>
+                          <small class="text-left invalid-feedback" *ngIf="email.invalid && (email.dirty || email.touched)">Invalid e-mail.</small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <!-- <label>Password</label> -->
+                        <input
+                          required
+                          type="password"
+                          placeholder="password"
+                          formControlName="password"
+                          id="password"
+                          class="form-control p-4 login-password"
+                          [ngClass]="{
+                              'is-invalid': password.invalid && (password.dirty || password.touched),
+                              'is-valid': password.valid
+                          }"
+                          autocomplete="off" 
+                        >
+                        <small class="text-left invalid-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">Invalid password.</small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <!-- <label>Confirm Password</label> -->
+                        <input type="password" class="form-control" formControlName="confirmpassword" placeholder="confirm password" required>
+                    </div>
+                      <div class="form-group mb-3">
+                          <!-- <input
+                              required
+                              type="text"
+                              placeholder="e-mail"
+                              formControlName="email"
+                              id="registerEmail"
+                              class="form-control p-4 login-email"
+                              [ngClass]="{
+                                  'is-invalid': register.invalid && (register.dirty || register.touched),
+                                  'is-valid': register.valid
+                              }"
+                              autocomplete="off"
+                              > -->
+                              <!-- <small class="text-left invalid-feedback" *ngIf="register.invalid && (register.dirty || register.touched)">Invalid e-mail.</small> -->
+                      </div>
+                      <p class="my-3">
+                          <a [routerLink]="'/log-in'">Login?</a>
+                      </p>
+                      <br>
+                      <button class="btn btn-lg my-5" [disabled]="!registerForm.valid">
+                          register
+                      </button>
+                  </form>
+              </div>
+            </div>
+          </div>
+          <div class="message-wrapper">
+            <div class="wrapper">
+              <div class="welcome">
+                <h2>Hey, friend</h2>
+                <p>Fill up your e-mail and password to enter the website.</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="register">
+                <h2>Smooth,</h2>
+                <p>
+                    We'll help you. Fill up required data to register your account.
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,10 @@
+<!-- <script src="http://localhost:3000/upload/build/UnityLoader.js"></script> -->
+<script src="./Build/UnityLoader.js"></script>
+<script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "./Build/webfile.json");
+    // UnityLoader.instantiate("unityContainer", "http://localhost:3000/upload/build/webfile.json");
+    UnityLoader.instantiate("unityContainer", "./Build/webfile.json");
+</script>
+<div class="webgl-content">
+     <div id="unityContainer" style="width: 960px; height: 600px; margin: auto"></div>
+</div>

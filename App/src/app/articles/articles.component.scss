@@ -1,0 +1,38 @@
+.uploadarticles{
+  z-index: 99;
+  position: fixed;
+  bottom: 7%;
+  right:1%;
+  button{
+    width: 70px;
+    height: 70px;
+    border-radius:50%;
+
+  }
+}
+
+.container{
+  color: #c1cc9b;
+  margin-top:5%;
+  margin-bottom: 2%;
+  font-size: 30px;
+  font-family: "Apple Chancery";
+  font-weight: bold;
+  text-align: center;
+}
+
+.carousel{
+  position: relative;
+  //margin-top: 50px;
+  z-index:0;
+}
+.h1{
+  font-size: 100px;
+}
+.showgame{
+  background-color: #e3dff4;
+  padding: 10px;
+  border-bottom: 1px #ccc7ab dotted;
+  margin-bottom:1%;
+}
+

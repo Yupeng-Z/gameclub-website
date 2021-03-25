@@ -1,0 +1,98 @@
+
+<div class="">
+    <div class="row">
+      <div class="">
+          <!-- [ngClass]="{register: route == '/register'}" -->
+        <div id="login-wrapper" class="" 
+          [ngClass]="{register: route == '/register'}"
+        >
+          <div class="form-wrapper">
+            <div class="wrapper">
+              <div class="login">
+                <form class="" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                      <h2 class="mb-2">Enter</h2>
+                      <br>
+                      
+                      <div class="form-group mb-3">
+                            <input
+                              required
+                              type="text"
+                              placeholder="e-mail"
+                              formControlName="email"
+                              id="email"
+                              class="form-control p-4 login-email"
+                              [ngClass]="{
+                                  'is-invalid': email.invalid && (email.dirty || email.touched),
+                                  'is-valid': email.valid
+                              }"
+                              autocomplete="on"
+                            >
+                            <!-- <input type="email" class="form-control" formControlName="email" placeholder="Enter email" required> -->
+                              <small class="text-left invalid-feedback" *ngIf="email.invalid && (email.dirty || email.touched)">Invalid e-mail.</small>
+                      </div>
+                      <div class="form-group mb-5">
+                          <input
+                              required
+                              type="password"
+                              placeholder="password"
+                              formControlName="password"
+                              id="password"
+                              class="form-control p-4 login-password"
+                              [ngClass]="{
+                                  'is-invalid': password.invalid && (password.dirty || password.touched),
+                                  'is-valid': password.valid
+                              }"
+                              autocomplete="off"
+                          >
+                              <!-- <input type="password" class="" formControlName="password" placeholder="Password"> -->
+                              <small class="text-left invalid-feedback" *ngIf="password.invalid && (password.dirty || password.touched)">Invalid password.</small>
+                      </div>
+                      <p>
+                          <a [routerLink]="'/register'">register?</a>
+                      </p>
+                      <br>
+                      <button class="btn btn-lg mb-5" (click)="verrify()" >
+                          Enter
+                      </button>
+                      <!-- <button nbButton status="success" (click)="showToast('top-up','success')">Success</button> -->
+                      <br>
+                      <small class="my-0 py-0">
+                          This site is protected by ROC .
+                      </small>
+                      <br>
+                      <small class="my-0 py-0">
+                        <a href="log-in">Privacy terms</a> and
+                        <a href="log-in">Service terms</a>.
+                      </small>
+                  </form>
+              </div>
+            </div>
+
+            <!-- ============register============= -->
+
+          
+            <!-- ======================= -->
+          </div>
+
+          
+          <div class="message-wrapper">
+            <div class="wrapper">
+              <div class="welcome">
+                <h2>Hey, friend</h2>
+                <p>Fill up your e-mail and password to enter the Game World!</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="register">
+                <h2>Smooth,</h2>
+                <p>
+                    We'll help you. Fill up required data to register your account.
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,45 @@
+@media(max-width:1000px){
+    .flex-container-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;      
+        height: 800px;
+    }
+    
+}
+.myfootbar{
+    margin-left:-35px;
+    width: 108%;
+    margin-bottom: -12px;
+}
+.box-1{
+    flex: 1;
+    order: 1;
+    span{
+        padding-left: 25px
+    }
+}
+.box-2{
+    flex: 2;
+    order: 2;
+    span{
+        text-align: center;
+    }
+}
+.box-3{
+    flex: 1;
+    order: 3;
+    div{
+        display:tabl; 
+        text-align: center
+    }
+}
+
+.mat-small{
+    display: "table-row";
+}
+
+.foot{
+    height: "auto" ;
+    color:"primary";
+}

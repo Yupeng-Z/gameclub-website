@@ -1,0 +1,339 @@
+.title{
+    text-align:center;
+}
+h1{
+    text-align: center;
+    color:blue;
+    font-size: 50px;
+ }
+.nav{
+   position:relative;
+   z-index:99;
+}
+.carousel{
+   position: relative;
+   //margin-top: 50px;
+   z-index:0;
+}
+.container{
+   margin-left: 100px;
+   margin-top: 50px;
+   margin-bottom: 200px;
+}
+
+ul{
+  list-style: none;
+}
+
+.big-img {
+  width: 1035px;
+  margin: 10px auto;
+  position: relative;
+}
+.big-img a {
+  display: block;
+
+}
+.big-img img {
+  width: 100%;
+  border: 1px solid #eee;
+  margin-top: -100px;
+}
+.big-img div {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 105px;
+  height: 22px;
+}
+.big-img div .star {
+  background-position: 0 -144px;
+}
+.big-img div i {
+  width: 12px;
+  height: 12px;
+  background: url(../../assets/images/opinion.png);
+  display: inline-block;
+  background-size: 42px;
+  vertical-align: middle;
+  margin-right: 2px;
+  position: relative;
+  margin-bottom: 2px;
+}
+.big-img div span {
+  display: inline-block;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.7);
+  font-size: 12px;
+}
+.big-img div .comment {
+  background-position: -28px -116px;
+  margin-left: 10px;
+}
+#content {
+  height: 3260px;
+  width: 1035px;
+  margin: 10px auto 0px;
+}
+#content_left {
+  width: 685px;
+  height: 400px;
+  float: left;
+  margin-top:30px;
+}
+#content_left ul {
+  background: darkslateblue;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,.15);
+  margin-bottom: 15px;
+
+}
+#content_left .game_presenter {
+  height: 38px;
+  line-height: 38px;
+  font-size: 12px;
+  margin-left:-30px;
+
+}
+#content_left .game_presenter a {
+  display: block;
+  float: left;
+  margin-top: 9px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+#content_left .game_title {
+  height: 30px;
+  font-size: 18px;
+  margin-left:-30px;
+}
+#content_left .game_title a {
+  color: white;
+  text-decoration: none;
+
+}
+#content_left .game_img {
+  width: 685px;
+  position: relative;
+  margin-top: 8px;
+}
+#content_left .game_img img {
+  width: 685px;
+  margin-left:-40px;
+}
+#content_left .game_img div {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 98px;
+  height: 22px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-shadow: 0 1px 0 rgba(0,0,0,.7);
+  font-size: 12px;
+}
+#content_left .game_img div .star {
+  background-position: 0 -144px;
+  margin-left:-20px;
+}
+#content_left .game_img div .comment {
+  background-position: -28px -116px;
+  margin-left: 10px;
+}
+#content_left .game_img div i {
+  width: 12px;
+  height: 12px;
+  background: url(../../assets/images/opinion.png);
+  display: inline-block;
+  background-size: 42px;
+  vertical-align: middle;
+  margin-right: 2px;
+  position: relative;
+  margin-bottom: 2px;
+}
+#content_left .game_describe {
+  height: 50px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  line-height: 50px;
+  color: white;
+  margin-left:-30px;
+}
+
+
+#content_right {
+  width: 325px;
+  height: 800px;
+  float: right;
+}
+
+#leaderboard {
+  width: 325px;
+  margin-top: 20px;
+}
+
+h3.right_head {
+  height: 42px;
+  font-size: 24px;
+  border-left: 4px solid #14B9C8;
+  /* line-height: 30px; */
+  text-indent: 5px;
+  font-weight: normal;
+  position: relative;
+  margin-top:20px;
+  color: rgb(251, 255, 28);
+  color: #333333;
+  margin-top:30px;
+}
+
+h3.right_head a {
+  text-decoration: none;
+  color: #14C4D9;
+  font-size: 14px;
+  position: absolute;
+  bottom: -2px;
+  right: 8px;
+}
+
+.leaderboard_content {
+  width: 100%;
+  background: #FAFAFA;
+  margin-top: 20px;
+  box-shadow: 0px 2px 3px 0px rgba(0,0,0,.15);
+}
+.select_content {
+  box-shadow: 1px 0 2px 0 rgba(0,0,0,.1);
+  background: darkslateblue;
+  height:700px;
+}
+.select_content li {
+  height: 55px;
+  padding: 15px 10px;
+  line-height: 55px;
+  margin-bottom:20px;
+}
+.select_content li span.order {
+  margin-left:-15px;
+  color: #FE937C;
+}
+.select_content li span {
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  float: left;
+  color: #999;
+  margin-left:-15px;
+}
+.select_content li img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+}
+.select_content li div {
+  float: left;
+  margin-left: 5px;
+  font-size: 14px;
+  height: 50px;
+  color: #999;
+}
+.select_content li div a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  height: 20px;
+  margin-top: -13px;
+  margin-bottom: 5px;
+}
+.select_content li div i {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background: url(../../assets/images/black_star.png) no-repeat;
+  background-size: 14px;
+}
+#hot_game_label .hot_game_content ul {
+  width: 400px;
+  height: 45px;
+  margin-left:-30px;
+}
+#hot_game_label .hot_game_content ul p {
+  float: left;
+  height: 45px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+#hot_game_label .hot_game_content ul p a {
+  display: block;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #14B9C8;
+  border-radius: 5px;
+  color: #14B9C8;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.leaderboard_content {
+  width: 100%;
+  background: #FAFAFA;
+  margin-top: 10px;
+  box-shadow: 0px 2px 3px 0px rgba(0,0,0,.15);
+}
+.select_content {
+  box-shadow: 1px 0 2px 0 rgba(0,0,0,.1);
+  background: darkslateblue;;
+}
+.select_content li {
+  height: 55px;
+  padding: 15px 10px;
+  line-height: 55px;
+}
+.select_content li span.order {
+  color: #FE937C;
+}
+.select_content li span {
+  font-size: 15px;
+  height: 50px;
+  line-height: 50px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  float: left;
+  color: #999;
+}
+.select_content li img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+}
+.select_content li div {
+  float: left;
+  margin-left: 5px;
+  font-size: 14px;
+  height: 50px;
+  color: #999;
+}
+.select_content li div a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  height: 20px;
+  margin-top: -13px;
+  margin-bottom: 5px;
+}
+.select_content li div i {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background: url(../../assets/images/black_star.png) no-repeat;
+  background-size: 14px;
+}
+

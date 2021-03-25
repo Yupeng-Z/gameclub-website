@@ -1,0 +1,17 @@
+.#*
+*~
+*#
+#*
+*.log
+*.tmp
+.DS_Store
+**/npm-cache
+**/node_modules
+/tmp
+.vscode/
+dist/docs/
+/dist
+*/unity
+*/tmp
+*/gamesstorage
+.idea/

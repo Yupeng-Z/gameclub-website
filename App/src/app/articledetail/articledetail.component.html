@@ -1,0 +1,56 @@
+<div class="detail">
+
+  <div class="carousel">
+    <app-carousel></app-carousel>
+  </div>
+
+
+  <button  [routerLink]="'/articles'"  nbButton class="button"> < Back </button>
+<div class="outter">
+  <nb-layout >
+    <nb-layout-header ><div class="toptext">Article Details</div></nb-layout-header>
+    <nb-layout-column class="leftpart">
+        <div *ngIf="article">AuthorID: <div><input nbInput fullWidth [value]="article.author" class="authorid" disabled></div></div>
+          <div *ngIf="article">Title: <div><input nbInput fullWidth [value]="article.title"  class="title" disabled></div></div>
+          <div *ngIf="article">Picture: <div><img src="{{article.picture}}" length="400px" width="500px" class="picture"> </div></div>
+      <div *ngIf="article" class="outside">Content:<div><textarea nbInput fullWidth [value]="article.description" disabled class="content"></textarea></div></div>
+
+    </nb-layout-column>
+    <!--
+    <nb-layout-column class="rightpart">Comments:
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col" style="color: #8c9eff">AuthorID</th>
+          <th scope="col" style="color: #8c9eff">Comment Content</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let comment of commentlist">
+          <td>
+            <ngb-highlight style="color: #adbaff" [result]="comment.author" [term]="comment.author"></ngb-highlight>
+          </td>
+          <td>
+            <ngb-highlight style="color: #adbaff" [result]="comment.content" [term]="comment.content"></ngb-highlight>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="commentleave">
+       <div > <input class="text" type="text" nbInput fullWidth status="info" placeholder="Leave Comment"></div>
+        <div class="btn"> <button nbButton status="info" >Submit</button></div>
+      </div>
+
+
+    </nb-layout-column>
+-->
+  </nb-layout>
+</div>
+
+
+
+<div>
+  <app-footbar></app-footbar>
+</div>
+</div>

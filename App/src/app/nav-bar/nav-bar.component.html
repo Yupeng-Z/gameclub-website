@@ -1,0 +1,72 @@
+<div class="mynavbar">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <a *ngIf="this.authService.isLoggedIn" class="welcome">Welcome!</a>
+      <!-- <a *ngIf="!this.authService.isLoggedIn" class="" routerLinkActive="active" routerLink="/log-in">Sign in</a>
+
+      <a *ngIf="!this.authService.isLoggedIn" class="" routerLinkActive="active"
+        routerLinkActive="active" routerLink="/sign-up">Sign up</a> -->
+
+      <!-- <a href="/homepage/{{id}}" id="menu-icon">Home</a> -->
+      <!-- <a href="/homepage" id="menu-icon">Home</a> -->
+      <a [routerLink]="'/homepage'" id="menu-icon">Home</a>
+      <a [routerLink]="'/games'" id="menu-icon">Games</a>
+
+      <a [routerLink]="'/articles'"  id="menu-icon">Articles</a>
+        
+      <a *ngIf="this.authService.isLoggedIn" [routerLink]="'/userprofile'"  id="menu-icon">Profile</a>
+      
+      
+
+      <div *ngIf="!this.authService.isLoggedIn" >
+          <button (click)="openWindow()" nbButton outline status="primary" type="button" class="loginbtn">Login</button>
+      </div>
+
+      <div class="profile" >
+        <!-- <nb-user name="{{this.currentUser.name}}"
+             title=" "
+             [nbContextMenu]="items"
+             nbContextMenuPlacement="right"
+             picture="../../assets/images/user-pic.png"
+             nbContextMenuTag="my-context-menu">
+        </nb-user> -->
+
+      <div *ngIf="this.authService.isLoggedIn" class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent" >
+      <div class="nav-item" ngbDropdown display="dynamic" placement="bottom" >
+        <div class="login">
+          <a  class="nav-link" style="cursor: pointer ; " ngbDropdownToggle id="navbarDropdown1" role="button">
+              <img src="../../assets/images/user-pic.png">
+              User:{{this.currentUser.name}}
+          </a>
+        </div>
+        <div ngbDropdownMenu aria-labelledby="navbarDropdown" class="dropdown-menu" autoClose=true>
+
+          <a [routerLink]="'/userprofile'"  style="margin-left: 25%;height: 15px;margin-top:5px;color:black" ngbDropdownItem href="#" (click)="$event.preventDefault()">Profile</a>
+          <!-- <a style="margin-left: 25%;height: 15px;margin-top:5px;color:black" ngbDropdownItem href="#" (click)="$event.preventDefault()">Upload</a> -->
+          <a style="margin-left: 25%;height: 15px;margin-top:5px;color:black" ngbDropdownItem href="#" (click)="$event.preventDefault()">others</a>
+          <button (click)="logout()" *ngIf="this.authService.isLoggedIn" type="button" class="logout">Logout</button>
+
+        </div>
+      </div>
+      </div>
+      </div>
+    </nav>
+</div>
+
+  <!--Import Google Icon Font-->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+  <!--Import materialize.css-->
+  <!-- <link type="text/css" rel="stylesheet" href="../../styles/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="../../styles/main.css" /> -->
+
+  <!-- <script>
+      $("div nav a").each(function () {
+        if ($(this)[0].href == String(window.location)) {
+            $(this).addClass("active-link").siblings().removeClass("active-link");
+        }
+        console.log("---------------------------------")
+      });
+      console.log("---------------------------------")
+  </script> -->
+
+

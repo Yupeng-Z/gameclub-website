@@ -1,0 +1,42 @@
+<div class="main">
+  <nb-reveal-card> 
+    <nb-card-front class="card">
+      <nb-card accent="info" status="warning">
+        <nb-card-body>
+           <form [formGroup]="firstForm"> 
+            <div class = "hinttext">First Step: Upload the Title And Content!</div>
+            <div class="input">
+              <p class="instruction">
+                Article Title:
+              </p>
+              <div class="input-group">
+                <input nbInput class="title" style="border-radius:9px;" type="text" placeholder="Enter article title" formControlName="title">
+              </div>
+              <p class="instruction margin">
+                Article Content:
+              </p>
+              <div class="input-group">
+                <input nbInput class="content" style="border-radius:9px;" type="text" placeholder="Enter article content" formControlName="content">
+              </div>
+            </div>
+          </form>
+        </nb-card-body>
+      </nb-card>
+    </nb-card-front>
+    <nb-card-back class="card">
+      <nb-card accent="primary" status="danger">
+        <nb-card-body>
+            <div class = "hinttext"  >Second Step: Upload the game picture!</div>
+            <div class="input">
+              <input nbInput style="border-radius:9px;" type="file" placeholder="article picture" (change)="onFileChange($event)">
+            </div>
+            <div class = "infotext">Last Step: Are you sure to upload you article?</div>
+            <div>
+              <input type="submit" value="Submit" class="btn" (click)="submit()">
+            </div>
+        </nb-card-body>
+      </nb-card>
+    </nb-card-back>
+  
+  </nb-reveal-card>
+</div>
